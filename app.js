@@ -22,15 +22,15 @@ app.use(methodOverride("_method"));
 var mongoose = require("mongoose");
 mongoose.set('useNewUrlParser', true);
 mongoose.set('useUnifiedTopology', true);
-mongoose.connect("mongodb://localhost/YelpCamp"); //-- for local database
-// mongoose.connect("mongodb+srv://Srezz:E0Y550F4bZhiXLeX@cluster0-oshu0.mongodb.net/test?retryWrites=true&w=majority",{
-// 	useNewUrlParser :true,
-// 	useCreateIndex :true
-// }).then(() => {
-// 	console.log('Connected to DB!');
-// }).catch(err => {
-// 	console.log('Error' , err.message);
-// });
+//mongoose.connect("mongodb://localhost/YelpCamp"); //-- for local database
+mongoose.connect("mongodb+srv://Srezz:E0Y550F4bZhiXLeX@cluster0-oshu0.mongodb.net/test?retryWrites=true&w=majority",{
+	useNewUrlParser :true,
+	useCreateIndex :true
+}).then(() => {
+	console.log('Connected to DB!');
+}).catch(err => {
+	console.log('Error' , err.message);
+});
 
 //Configuration of Body Parser 
 var bodyParser = require('body-parser');
