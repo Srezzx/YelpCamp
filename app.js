@@ -71,6 +71,6 @@ app.use(authRoutes);
 app.use(campgroundRoutes);
 app.use(commentRoutes);
 
-app.listen(process.env.POST || 3000 , process.env.ID,function(req,res){
+app.listen(process.env.PORT || 3000 , process.env.ID,function(req,res){
 	console.log("Server has started");
 });
